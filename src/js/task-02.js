@@ -10,7 +10,7 @@ const ingredients = [
 const mainList = document.querySelector('#ingredients');
 
 // Make function for creation list items 
-const createListItems = function (ingredients) {
+const createListItems = ingredients => {
   return ingredients.map(ingredient => {
     const createItem = document.createElement('li');
     createItem.textContent = `${ingredient}`;
