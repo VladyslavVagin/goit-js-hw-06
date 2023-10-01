@@ -12,3 +12,16 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// Take container ul from HTML 
+const galleryContainer = document.querySelector('.gallery');
+
+// create items of gallery 
+const elements = images.map(({ url, alt }) =>
+  `<li class="item"><img src="${url}" alt="${alt}" class="image"></img></li>`).join('');
+
+// add elements of gallery to gallery-container 
+galleryContainer.insertAdjacentHTML("afterbegin", elements);
+
+// show result in console
+console.log(galleryContainer);

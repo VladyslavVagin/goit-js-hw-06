@@ -13,8 +13,8 @@ const mainList = document.querySelector('#ingredients');
 const createListItems = ingredients => {
   return ingredients.map(ingredient => {
     const createItem = document.createElement('li');
-    createItem.textContent = `${ingredient}`;
-    createItem.classList = 'item';
+    createItem.textContent = ingredient;
+    createItem.classList.add('item');
     return createItem;
   })
 }
